@@ -13,12 +13,12 @@ function textRaplcer(event, input){
       event.target.value = text;
       event.target.setSelectionRange(posStart, posEnd);
     }
-    
+
   } else {
       let sel = document.getSelection(),
-        range = document.createRange(),
-        pos = sel.getRangeAt(0).startOffset,
-        elemFocus = sel.focusNode;
+          range = document.createRange(),
+          pos = sel.getRangeAt(0).startOffset,
+          elemFocus = sel.focusNode;
       text = elemFocus.textContent.slice();
 
       if(checkWord(text)){
